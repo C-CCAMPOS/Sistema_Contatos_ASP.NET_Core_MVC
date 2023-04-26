@@ -1,0 +1,15 @@
+﻿@page
+@model SistemaContas.Presentation.Views.Shared._ViewStartModel
+@{
+    //capturar o nome do controlador que estamos acessando
+    var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+
+    //verificando qual controlador está sendo acessado e definir o layout que a página herdar.
+    switch(controllerName)
+    {
+        case "Account":
+            Layout = "~/Views/Shared/_AccountLayout.cshtml";
+            break;
+    }
+   
+}
